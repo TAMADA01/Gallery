@@ -19,12 +19,13 @@ public class SceneOrientation : MonoBehaviour
                 break;
             case OrientationType.Portrait:
                 Screen.orientation = ScreenOrientation.Portrait;
-                Screen.orientation = ScreenOrientation.AutoRotation;
 
                 Screen.autorotateToPortrait = true;
                 Screen.autorotateToPortraitUpsideDown = true;
                 Screen.autorotateToLandscapeLeft = false;
                 Screen.autorotateToLandscapeRight = false;
+
+                Screen.orientation = ScreenOrientation.AutoRotation;
                 break;
             case OrientationType.Landscape:
                 Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -33,6 +34,8 @@ public class SceneOrientation : MonoBehaviour
                 Screen.autorotateToPortraitUpsideDown = false;
                 Screen.autorotateToLandscapeLeft = true;
                 Screen.autorotateToLandscapeRight = true;
+
+                Screen.orientation = ScreenOrientation.AutoRotation;
                 break;
         }
     }
